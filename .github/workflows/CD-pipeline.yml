@@ -22,4 +22,4 @@ jobs:
       - name: Delete Docker container
         run: docker rm -f calculator-app || true
       - name: Run Docker container
-        run: sudo docker container run --detach --publish 5000:5000 --name calculator-app${{ secrets.DOCKERHUB_USERNAME }}/calculator-app:v1
+        run: sudo docker container run --detach --publish 5000:5000 --name calculator-app ${{ secrets.DOCKERHUB_USERNAME }}/calculator-app:v1
